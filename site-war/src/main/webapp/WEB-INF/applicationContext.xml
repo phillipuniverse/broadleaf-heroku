@@ -37,18 +37,22 @@
         <property name="defaultDataSource" ref="webDS"/>
     </bean>
     
+    <bean class="java.net.URI" id="dbUrl">
+        <constructor-arg value="${DATABASE_URL}"/>
+    </bean>
+    
     <bean id="webDS" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
-		<property name="url" value="jdbc:hsqldb:hsql://localhost/broadleaf;ifexists=true" />
-		<property name="username" value="sa" />
-		<property name="password" value="" />
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }" />
+		<property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }" />
+		<property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }" />
 	</bean>
 
     <bean id="webStorageDS" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-		<property name="driverClassName" value="org.hsqldb.jdbcDriver" />
-		<property name="url" value="jdbc:hsqldb:hsql://localhost/broadleaf;ifexists=true" />
-		<property name="username" value="sa" />
-		<property name="password" value="" />
+		<property name="driverClassName" value="org.postgresql.Driver" />
+        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + @dbUrl.getPath() }" />
+        <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }" />
+        <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }" />
 	</bean>
 
     <bean id="blCacheManager"
