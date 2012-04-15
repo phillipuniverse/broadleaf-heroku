@@ -193,9 +193,23 @@
                 <type>jar</type>
                 <scope>compile</scope>
             </dependency>
+             <dependency>
+                <groupId>org.broadleafcommerce</groupId>
+                <artifactId>broadleaf-admin-module</artifactId>
+                <version>${blc.version}</version>
+                <type>jar</type>
+                <scope>compile</scope>
+            </dependency>
             <dependency>
                 <groupId>org.broadleafcommerce</groupId>
                 <artifactId>broadleaf-contentmanagement-module</artifactId>
+                <version>${blc.version}</version>
+                <type>jar</type>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.broadleafcommerce</groupId>
+                <artifactId>broadleaf-open-admin-platform</artifactId>
                 <version>${blc.version}</version>
                 <type>jar</type>
                 <scope>compile</scope>
