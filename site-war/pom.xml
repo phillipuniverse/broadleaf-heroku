@@ -132,32 +132,6 @@
                 <app.container></app.container>
             </properties>
         </profile>
-        <profile>
-            <id>jboss-5.1</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.broadleafcommerce</groupId>
-                    <artifactId>broadleaf-open-admin-platform</artifactId>
-                    <exclusions>
-                        <exclusion>
-                            <artifactId>xercesImpl</artifactId>
-                            <groupId>xerces</groupId>
-                        </exclusion>
-                        <exclusion>
-                            <artifactId>xml-apis</artifactId>
-                            <groupId>xml-apis</groupId>
-                        </exclusion>
-                        <exclusion>
-                            <artifactId>xml-apis-ext</artifactId>
-                            <groupId>xml-apis</groupId>
-                        </exclusion>
-                    </exclusions>
-                </dependency>
-            </dependencies>
-            <properties>
-                <app.container>-jboss.5.1</app.container>
-            </properties>
-        </profile>
     </profiles>
     <dependencies>
         <dependency>
@@ -183,10 +157,6 @@
         <dependency>
             <groupId>org.broadleafcommerce</groupId>
             <artifactId>broadleaf-common</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
         </dependency>
         <dependency>
             <groupId>commons-dbcp</groupId>
