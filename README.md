@@ -62,4 +62,6 @@ Edit startup-foreman-local.sh and provide values that are relevant to your local
 
 Assuming the default Tomcat port is left as-is, you should then be able to hit http://localhost:8080 to load the application
 
+[Running instance on Heroku free](http://broadleaf.heroku.com). The app might need to refresh itself, so just give it a while to load on first-visit.
+
 Blog post detailing these steps to come!
