@@ -9,7 +9,7 @@ cp ./site-war/heroku-server.xml ./site-war/target/cargo/configurations/tomcat6x/
 chmod a+x ./site-war/target/cargo/installs/apache-tomcat-6.0.18/apache-tomcat-6.0.18/bin/*.sh
 
 #set the correct port and database settings
-JAVA_OPTS="$JAVA_OPTS -XX:MaxPermSize=256M -Xmx512M -Dhttp.port=$PORT -DDATABASE_URL=$DATABASE_URL"
+JAVA_OPTS="$JAVA_OPTS -XX:MaxPermSize=256M -Xmx450M -Dhttp.port=$PORT -DDATABASE_URL=$DATABASE_URL"
 export JAVA_OPTS
 
 #start Tomcat
